@@ -4,7 +4,7 @@ class Book {
       price,
       image,
       description =
-          'hihihihihi';
+          'Đây là nội dung';
   int pages;
   double rating;
 
