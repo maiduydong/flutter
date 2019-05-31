@@ -2,8 +2,14 @@ import 'package:helloworld/data.dart';
 import 'package:helloworld/detail.dart';
 import 'package:flutter/material.dart';
 import 'home.dart';
+import 'package:flutter/rendering.dart';
 
-void main() => runApp(new MyApp());
+void main() {
+//  debugPaintSizeEnabled = true;
+//  debugPaintBaselinesEnabled = true;
+//  debugPaintPointersEnabled = true;
+  runApp(MyApp());
+}
 
 class MyApp extends StatelessWidget {
   @override

@@ -47,8 +47,8 @@ class Home extends StatelessWidget {
           sliver: SliverGrid.count(
             childAspectRatio: 2 / 3,
             crossAxisCount: 3,
-            mainAxisSpacing: 20.0,
-            crossAxisSpacing: 20.0,
+            mainAxisSpacing: 16.0,
+            crossAxisSpacing: 16.0,
             children: books.map((book) => createTile(book)).toList(),
           ),
         )

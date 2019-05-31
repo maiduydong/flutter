@@ -33,7 +33,7 @@ class Detail extends StatelessWidget {
               shadowColor: Colors.yellow.shade900,
               child: Image(
                 image: AssetImage(book.image),
-                fit: BoxFit.cover,
+//                fit: BoxFit.cover,
               ),
             ),
           ),
@@ -81,12 +81,38 @@ class Detail extends StatelessWidget {
 
     final topContent = Container(
       color: Theme.of(context).primaryColor,
-      padding: EdgeInsets.only(bottom: 16.0),
-      child: Row(
-        crossAxisAlignment: CrossAxisAlignment.start,
+//      child: Align(
+//        alignment: Alignment.center,
+//        child: Row(
+//          children: <Widget>[
+//            Flexible(
+//              flex: 2,
+//              child: topLeft,
+//            ),
+//            Flexible(
+//              flex: 3,
+//              child: topRight,
+//            )
+//          ],
+//        ),
+//      ),
+      child: Column(
+        crossAxisAlignment: CrossAxisAlignment.center,
+        mainAxisAlignment: MainAxisAlignment.center,
         children: <Widget>[
-          Flexible(flex: 2, child: topLeft),
-          Flexible(flex: 3, child: topRight),
+          Row(
+            children: <Widget>[
+              Flexible(
+                flex: 2,
+                child: topLeft,
+              ),
+              Flexible(
+                flex: 3,
+                child: topRight,
+              ),
+              Expanded()
+            ],
+          )
         ],
       ),
     );
@@ -106,7 +132,16 @@ class Detail extends StatelessWidget {
     return Scaffold(
       appBar: appBar,
       body: Column(
-        children: <Widget>[topContent, bottomContent],
+        children: <Widget>[
+          Flexible(
+            flex: 2,
+            child: topContent,
+          ),
+          Flexible(
+            flex: 2,
+            child: bottomContent,
+          )
+        ],
       ),
     );
   }
