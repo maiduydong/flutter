@@ -110,7 +110,6 @@ class Detail extends StatelessWidget {
                 flex: 3,
                 child: topRight,
               ),
-              Expanded()
             ],
           )
         ],
